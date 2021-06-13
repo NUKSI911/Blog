@@ -1,0 +1,76 @@
+---
+title: Gatsby Tutorial
+slug: gatsby-tutorial
+image: ./images/gatsby-1.png
+date: 2020-05-27
+author: Nurudeen Yekeen
+category: gatsby
+readTime: 34
+---
+
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../../components/Complete'
+
+<section className="mdx-page">
+<div className="special"> 
+    <h3>
+See More
+</h3>
+</div>
+
+<div className="code">
+
+```js
+const firstName = 'john'
+const lastname = 'smith'
+```
+
+</div>
+
+<div className="nice-text">
+  <FiInfo className="nice-text-icon" />
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tempore voluptatem
+  veniam et qui, recusandae pariatur quo id debitis nobis, laboriosam nisi autem
+  corporis, iste deleniti. Consectetur suscipit quas molestias. Lorem ipsum dolor
+  sit amet consectetur adipisicing elit. Ullam tempore voluptatem veniam et qui,
+  recusandae pariatur quo id debitis nobis, laboriosam nisi autem corporis, iste
+  deleniti. Consectetur suscipit quas molestias. Lorem ipsum dolor sit amet consectetur
+  adipisicing elit. Ullam tempore voluptatem veniam et qui, recusandae pariatur quo
+  id debitis nobis, laboriosam nisi autem corporis, iste deleniti. Consectetur suscipit
+  quas molestias.
+</div>
+
+<h2>React Component</h2>
+
+<Counter />
+
+```js import React from "react"
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+</section>
+
+<Link to="/posts" className="btn center-btn">
+  all posts
+</Link>
